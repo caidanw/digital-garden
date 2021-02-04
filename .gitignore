@@ -1,0 +1,5 @@
+# OS X Specific
+.DS_Store
+
+# TiddlyWiki Desktop Local Backups
+index.html_backup/
