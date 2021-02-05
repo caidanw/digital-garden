@@ -155,6 +155,10 @@ Error message and password prompt
 
 <li>$:/.giffmex/ViewTemplate/refstranscludecollapse</li>
 
+<li>$:/.mildmelon/snippets/JavaScriptMacroTemplate</li>
+
+<li>$:/.mildmelon/styles/CustomStylesheet</li>
+
 <li>$:/.mildmelon/ui/ViewTemplate/summary-link</li>
 
 <li>$:/config/AutoSave</li>
@@ -174,6 +178,8 @@ Error message and password prompt
 <li>$:/config/codemirror/theme</li>
 
 <li>$:/config/DefaultMoreSidebarTab</li>
+
+<li>$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/preview</li>
 
 <li>$:/config/EditorTypeMappings/text/vnd.tiddlywiki</li>
 
@@ -245,9 +251,9 @@ Error message and password prompt
 
 <li>$:/language</li>
 
-<li>$:/language/Snippets/JavaScriptMacroTemplate</li>
-
 <li>$:/languages/en-US</li>
+
+<li>$:/layout</li>
 
 <li>$:/palette</li>
 
@@ -369,11 +375,15 @@ Error message and password prompt
 
 <li>$:/state/folded/New Tiddler</li>
 
+<li>$:/state/folded/Programmers Anthem</li>
+
 <li>$:/state/folded/TableOfContents</li>
 
 <li>$:/state/folded/YouTube Video</li>
 
 <li>$:/state/peek-stylesheets/mode/--994748944</li>
+
+<li>$:/state/peek-stylesheets/open/--994748944$:/plugins/mildmelon/youtube/styles/style.css</li>
 
 <li>$:/state/plugin-info--896887961-$:/ak/plugins/EmbedYouTube</li>
 
@@ -461,6 +471,14 @@ Error message and password prompt
 
 <li>$:/state/tree/$:/.giffmex/ViewTemplate/</li>
 
+<li>$:/state/tree/$:/.mildmelon/</li>
+
+<li>$:/state/tree/$:/.mildmelon/snippets/</li>
+
+<li>$:/state/tree/$:/.mildmelon/styles/</li>
+
+<li>$:/state/tree/$:/.mildmelon/ui/</li>
+
 <li>$:/state/tree/$:/ak/</li>
 
 <li>$:/state/tree/$:/ak/plugins/</li>
@@ -546,8 +564,6 @@ Error message and password prompt
 <li>Code Shanty</li>
 
 <li>Customizations</li>
-
-<li>CustomStylesheet</li>
 
 <li>GettingStarted</li>
 
@@ -679,7 +695,7 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 }
 </pre>
 </div>
-<div caption="{{$:/core/images/preview-open}}" created="20200129233103456" modified="20200521151510697" tags="$:/tags/SideBar $:/giffmex/stroll $:/giffmex/blinks" title="$:/.giffmex/sidebar/tabs/strollcontrols">
+<div caption="{{$:/core/images/preview-open}}" created="20200129233103456" creator="mildmelon" modified="20210205061844719" modifier="mildmelon" tags="$:/giffmex/stroll $:/giffmex/blinks" title="$:/.giffmex/sidebar/tabs/strollcontrols">
 <pre>\define tagreset() 
 &lt;$list filter=&quot;[tag[$:/giffmex/refs]sort[created]] -[[$(currentTiddler)$]]&quot; variable=&quot;removeme&quot;&gt;
 &lt;$action-listops  $tiddler=&lt;&lt;removeme&gt;&gt; $tags=&quot;+[remove[$:/tags/ViewTemplate]]&quot;/&gt;
@@ -776,6 +792,48 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 &lt;/span&gt;
 </pre>
 </div>
+<div caption="JavaScript Macro Template" created="20210203201851671" creator="mildmelon" modified="20210205061733778" modifier="mildmelon" tags="$:/tags/TextEditor/Snippet Customizations" title="$:/.mildmelon/snippets/JavaScriptMacroTemplate" type="application/javascript">
+<pre>/*\
+title: 
+type: application/javascript
+module-type: macro
+
+&lt;description&gt;
+
+Usage: &lt;&lt;macro_name arg1:val1 arg2:&quot;val2:with escape&quot;&gt;&gt;
+
+arg1 =&gt; arg1 description
+	:option1 =&gt; option1 description
+	:option2 =&gt; option2 description
+arg2 =&gt; arg2 description
+	:string =&gt; allowed values description
+\*/
+
+
+(function(){
+
+	&quot;use strict&quot;;
+	
+	// Name used to invoke the macro
+	exports.name = &quot;&quot;;
+	
+	// Parameters that the macro accepts
+	exports.params = [
+		{ name: &quot;param1&quot; },
+		{ name: &quot;param2&quot; },
+	];
+	
+	// Main point of execution when the macro is parsed
+	// Note: must return a string
+	exports.run = function(param1, param2) {
+		return &quot;Hello my name is &quot; + param1 + &quot; &quot; + param2;
+	};
+
+})();</pre>
+</div>
+<div caption="Custom Stylesheet" created="20210203195321485" creator="mildmelon" modified="20210205061646797" modifier="mildmelon" tags="$:/tags/Stylesheet Customizations" title="$:/.mildmelon/styles/CustomStylesheet" type="text/css">
+<pre></pre>
+</div>
 <div bag="default" created="20141119004109928" creator="Tobias Beer" list-after="$:/core/ui/ViewTemplate/tags" modified="20210205060051877" modifier="mildmelon" revision="0" summary="shows a summary or link " tags="$:/tags/ViewTemplate" title="$:/.mildmelon/ui/ViewTemplate/summary-link" type="text/vnd.tiddlywiki" url="[[Tobias Beer summary-link|http://tobibeer.github.io/tb5/#%24%3A%2F.tb%2Fui%2FViewTemplate%2Fsummary-link]]">
 <pre>&lt;$list filter=&quot;[all[current]has[summary]]&quot;&gt;
 @@color:grey; // &lt;$transclude field=&quot;summary&quot; mode=&quot;block&quot;/&gt; //@@
@@ -810,6 +868,9 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 </div>
 <div created="20210202153620235" modified="20210202153620235" title="$:/config/DefaultMoreSidebarTab">
 <pre>$:/core/ui/MoreSideBar/All</pre>
+</div>
+<div created="20210205061433444" creator="mildmelon" modified="20210205061435137" modifier="mildmelon" title="$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/preview">
+<pre>show</pre>
 </div>
 <div created="20200510024843460" modified="20200603121638626" tags="$:/giffmex/stroll $:/giffmex/blinks" title="$:/config/EditorTypeMappings/text/vnd.tiddlywiki">
 <pre>comptext</pre>
@@ -10753,11 +10814,11 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 &lt;/$reveal&gt;
 </pre>
 </div>
-<div created="20210202151402267" creator="mildmelon" modified="20210205042132977" modifier="mildmelon" title="$:/DefaultTiddlers">
-<pre>[[TableOfContents]]
+<div created="20210202151402267" creator="mildmelon" modified="20210205062041004" modifier="mildmelon" title="$:/DefaultTiddlers">
+<pre>TableOfContents
 [list[$:/StoryList]]</pre>
 </div>
-<div created="20210203161152205" creator="mildmelon" list="TableOfContents $:/language/Snippets/JavaScriptMacroTemplate CustomStylesheet [[Markup Reference]]" modified="20210205042026883" modifier="mildmelon" title="$:/favorites/favlist">
+<div created="20210203161152205" creator="mildmelon" list="TableOfContents $:/.mildmelon/snippets/JavaScriptMacroTemplate $:/.mildmelon/styles/CustomStylesheet [[Markup Reference]]" modified="20210205062041005" modifier="mildmelon" title="$:/favorites/favlist">
 <pre></pre>
 </div>
 <div caption="Meta" created="20210203174907842" creator="mildmelon" list="[[Markup Reference]]" modified="20210205042103423" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/favorites/folder-002">
@@ -10785,45 +10846,6 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 </div>
 <div created="20210202154430232" modified="20210202154501458" title="$:/language">
 <pre>$:/languages/en-US</pre>
-</div>
-<div caption="JavaScript Macro Template" created="20210203201851671" creator="mildmelon" modified="20210203212719377" modifier="mildmelon" tags="$:/tags/TextEditor/Snippet Customizations" title="$:/language/Snippets/JavaScriptMacroTemplate" type="application/javascript">
-<pre>/*\
-title: 
-type: application/javascript
-module-type: macro
-
-&lt;description&gt;
-
-Usage: &lt;&lt;macro_name arg1:val1 arg2:&quot;val2:with escape&quot;&gt;&gt;
-
-arg1 =&gt; arg1 description
-	:option1 =&gt; option1 description
-	:option2 =&gt; option2 description
-arg2 =&gt; arg2 description
-	:string =&gt; allowed values description
-\*/
-
-
-(function(){
-
-	&quot;use strict&quot;;
-	
-	// Name used to invoke the macro
-	exports.name = &quot;&quot;;
-	
-	// Parameters that the macro accepts
-	exports.params = [
-		{ name: &quot;param1&quot; },
-		{ name: &quot;param2&quot; },
-	];
-	
-	// Main point of execution when the macro is parsed
-	// Note: must return a string
-	exports.run = function(param1, param2) {
-		return &quot;Hello my name is &quot; + param1 + &quot; &quot; + param2;
-	};
-
-})();</pre>
 </div>
 <div author="Ben Webber" core-version="&gt;=5.0.0" dependents="$:/languages/en-GB" description="English (US)" name="en-US" plugin-priority="110" plugin-type="language" title="$:/languages/en-US" type="application/json" version="5.1.23">
 <pre>{
@@ -10871,6 +10893,9 @@ arg2 =&gt; arg2 description
         }
     }
 }</pre>
+</div>
+<div created="20210205061452908" creator="mildmelon" modified="20210205061453435" modifier="mildmelon" title="$:/layout">
+<pre>$:/core/ui/PageTemplate</pre>
 </div>
 <div created="20210202151819433" modified="20210202152441905" title="$:/palette">
 <pre>$:/palettes/Vanilla</pre>
@@ -12259,7 +12284,7 @@ content=&lt;&lt;contents&gt;&gt;
 /&gt;&lt;/div&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div caption="Recently added" created="20200103090757281" creator="mildmelon" list="TableOfContents $:/language/Snippets/JavaScriptMacroTemplate CustomStylesheet [[Favorites Plugin]] $:/plugins/kookma/favorites/viewtoolbar" modified="20210205042103424" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/plugins/kookma/favorites/recent" type="text/vnd.tiddlywiki">
+<div caption="Recently added" created="20200103090757281" creator="mildmelon" list="TableOfContents $:/.mildmelon/snippets/JavaScriptMacroTemplate $:/.mildmelon/styles/CustomStylesheet [[Favorites Plugin]] $:/plugins/kookma/favorites/viewtoolbar" modified="20210205062041005" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/plugins/kookma/favorites/recent" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
 <div caption="Favorites" created="20191226064836102" creator="mildmelon" list-after="$:/core/ui/SideBar/Open" modified="20210203161150932" modifier="mildmelon" tags="$:/tags/SideBar" title="$:/plugins/kookma/favorites/sidebar-tab" type="text/vnd.tiddlywiki">
@@ -13274,6 +13299,9 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210205042604501" creator="mildmelon" modified="20210205042606874" modifier="mildmelon" title="$:/state/folded/New Tiddler">
 <pre>show</pre>
 </div>
+<div created="20210205062308268" creator="mildmelon" modified="20210205062356086" modifier="mildmelon" title="$:/state/folded/Programmers Anthem">
+<pre>show</pre>
+</div>
 <div created="20210205051820233" creator="mildmelon" modified="20210205051839581" modifier="mildmelon" title="$:/state/folded/TableOfContents">
 <pre>show</pre>
 </div>
@@ -13282,6 +13310,9 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 </div>
 <div created="20210202154711474" creator="mildmelon" modified="20210202154712228" modifier="mildmelon" title="$:/state/peek-stylesheets/mode/--994748944">
 <pre>restored</pre>
+</div>
+<div created="20210205061613560" creator="mildmelon" modified="20210205061614318" modifier="mildmelon" title="$:/state/peek-stylesheets/open/--994748944$:/plugins/mildmelon/youtube/styles/style.css">
+<pre>no</pre>
 </div>
 <div created="20210203175800704" creator="mildmelon" modified="20210203200254462" modifier="mildmelon" title="$:/state/plugin-info--896887961-$:/ak/plugins/EmbedYouTube">
 <pre>yes</pre>
@@ -13310,7 +13341,7 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210203160925485" creator="mildmelon" modified="20210203160926446" modifier="mildmelon" title="$:/state/plugin-info-580764894-$:/plugins/kookma/favorites--610748381">
 <pre>contents</pre>
 </div>
-<div created="20210203171821601" creator="mildmelon" modified="20210203175731059" modifier="mildmelon" title="$:/state/search/currentTab">
+<div created="20210203171821601" creator="mildmelon" modified="20210205061755874" modifier="mildmelon" title="$:/state/search/currentTab">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
 <div created="20210202154020242" creator="mildmelon" modified="20210205060832640" modifier="mildmelon" title="$:/state/showeditpreview">
@@ -13325,13 +13356,13 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210202154448431" creator="mildmelon" modified="20210203183738511" modifier="mildmelon" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20210202151456818" creator="mildmelon" modified="20210203215619592" modifier="mildmelon" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20210202151456818" creator="mildmelon" modified="20210205061455162" modifier="mildmelon" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div created="20210203171905209" creator="mildmelon" modified="20210203171914988" modifier="mildmelon" title="$:/state/tab--2072517985">
 <pre>$:/plugins/kookma/favorites/manager/folders</pre>
 </div>
-<div created="20210202154645544" creator="mildmelon" modified="20210203180955928" modifier="mildmelon" title="$:/state/tab--2112689675">
+<div created="20210202154645544" creator="mildmelon" modified="20210205061932177" modifier="mildmelon" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
 <div created="20210203212212539" creator="mildmelon" modified="20210203215610460" modifier="mildmelon" title="$:/state/tab--697582678">
@@ -13340,7 +13371,7 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210202152539322" creator="mildmelon" modified="20210202160300062" modifier="mildmelon" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20210202154655230" creator="mildmelon" modified="20210203180954054" modifier="mildmelon" title="$:/state/tab--959111941">
+<div created="20210202154655230" creator="mildmelon" modified="20210205061931322" modifier="mildmelon" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/EditorTypes</pre>
 </div>
 <div created="20210202151708419" creator="mildmelon" modified="20210203193538982" modifier="mildmelon" title="$:/state/tab-1163638994">
@@ -13349,23 +13380,23 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210203200809562" creator="mildmelon" modified="20210203200834782" modifier="mildmelon" title="$:/state/tab-1405194234">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
 </div>
-<div created="20210202151455796" creator="mildmelon" modified="20210205051102681" modifier="mildmelon" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div created="20210202151455796" creator="mildmelon" modified="20210205062445500" modifier="mildmelon" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20210202152447145" creator="mildmelon" modified="20210203160341697" modifier="mildmelon" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210202151632864" creator="mildmelon" modified="20210205060202465" modifier="mildmelon" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Tags</pre>
+<div created="20210202151632864" creator="mildmelon" modified="20210205061851264" modifier="mildmelon" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20210203171821602" creator="mildmelon" modified="20210203175731059" modifier="mildmelon" title="$:/state/tab/search-results/sidebar">
+<div created="20210203171821602" creator="mildmelon" modified="20210205061755875" modifier="mildmelon" title="$:/state/tab/search-results/sidebar">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20210202151544747" creator="mildmelon" modified="20210205060755108" modifier="mildmelon" title="$:/state/tab/sidebar--595412856">
+<div created="20210202151544747" creator="mildmelon" modified="20210205061852287" modifier="mildmelon" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20210202153956065" creator="mildmelon" modified="20210203215622939" modifier="mildmelon" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
+<div created="20210202153956065" creator="mildmelon" modified="20210205061443788" modifier="mildmelon" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
 <div created="20210205060411175" creator="mildmelon" modified="20210205060635988" modifier="mildmelon" title="$:/state/tag-manager/Customizations">
 <pre>closed</pre>
@@ -13400,8 +13431,8 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210203184433673" creator="mildmelon" modified="20210203184433673" modifier="mildmelon" title="$:/state/toc/TableOfContents/Videos-Rick Astley - Never Gonna Give You Up (Video)-497309061">
 <pre>open</pre>
 </div>
-<div created="20210203190925617" creator="mildmelon" modified="20210203202748792" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/">
-<pre>hide</pre>
+<div created="20210203190925617" creator="mildmelon" modified="20210205061836450" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/">
+<pre>show</pre>
 </div>
 <div created="20210203190930539" creator="mildmelon" modified="20210203190930539" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/sidebar/">
 <pre>show</pre>
@@ -13411,6 +13442,18 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 </div>
 <div created="20210203190929657" creator="mildmelon" modified="20210203190929657" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/ViewTemplate/">
 <pre>show</pre>
+</div>
+<div created="20210205061820324" creator="mildmelon" modified="20210205061820324" modifier="mildmelon" title="$:/state/tree/$:/.mildmelon/">
+<pre>show</pre>
+</div>
+<div created="20210205061828683" creator="mildmelon" modified="20210205061829195" modifier="mildmelon" title="$:/state/tree/$:/.mildmelon/snippets/">
+<pre>hide</pre>
+</div>
+<div created="20210205061829833" creator="mildmelon" modified="20210205061830313" modifier="mildmelon" title="$:/state/tree/$:/.mildmelon/styles/">
+<pre>hide</pre>
+</div>
+<div created="20210205061826223" creator="mildmelon" modified="20210205061827813" modifier="mildmelon" title="$:/state/tree/$:/.mildmelon/ui/">
+<pre>hide</pre>
 </div>
 <div created="20210203200508959" creator="mildmelon" modified="20210203200521387" modifier="mildmelon" title="$:/state/tree/$:/ak/">
 <pre>show</pre>
@@ -13478,8 +13521,8 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210203200158298" creator="mildmelon" modified="20210203200159052" modifier="mildmelon" title="$:/state/tree/$:/plugins/snowgoon88/">
 <pre>hide</pre>
 </div>
-<div created="20210203200156290" creator="mildmelon" modified="20210203202705608" modifier="mildmelon" title="$:/state/tree/$:/plugins/tiddlywiki/">
-<pre>show</pre>
+<div created="20210203200156290" creator="mildmelon" modified="20210205061812869" modifier="mildmelon" title="$:/state/tree/$:/plugins/tiddlywiki/">
+<pre>hide</pre>
 </div>
 <div created="20210203202726398" creator="mildmelon" modified="20210203202730700" modifier="mildmelon" title="$:/state/tree/$:/plugins/tiddlywiki/codemirror/">
 <pre>hide</pre>
@@ -13502,7 +13545,7 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div created="20210202154608493" creator="m" modified="20210202154609666" modifier="mildmelo" title="$:/status/UserName">
 <pre>mildmelon</pre>
 </div>
-<div created="20210205051351208" creator="mildmelon" list="[[Programmers Anthem]] [[Code Monkey]] $:/plugins/mildmelon/youtube/styles/style.css $:/plugins/mildmelon/youtube/macros/yt.js" modified="20210205060758107" modifier="mildmelon" title="$:/StoryList">
+<div list="TableOfContents [[Programmers Anthem]] [[Code Monkey]] $:/plugins/mildmelon/youtube/styles/style.css $:/plugins/mildmelon/youtube/macros/yt.js" title="$:/StoryList">
 <pre></pre>
 </div>
 <div color="#bbb" created="20210205060424400" creator="mildmelon" icon="$:/core/images/tag-button" modified="20210205060424400" modifier="mildmelon" title="$:/TagManager">
@@ -13728,14 +13771,11 @@ Usage: &lt;&lt;yt dQw4w9WgXcQ&gt;&gt;
 <div color="#73fa79" created="20210205060215522" creator="mildmelon" modified="20210205060624697" modifier="mildmelon" title="Code Shanty">
 <pre></pre>
 </div>
-<div color="#d6d6d6" created="20210203205213755" creator="mildmelon" icon="$:/core/images/options-button" modified="20210205060437276" modifier="mildmelon" tags="TableOfContents" title="Customizations" type="text/vnd.tiddlywiki">
+<div color="#d6d6d6" created="20210203205213755" creator="mildmelon" icon="$:/core/images/options-button" modified="20210205062041005" modifier="mildmelon" tags="TableOfContents" title="Customizations" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;list-links &quot;[tag[Customizations]sort[title]]&quot;&gt;&gt;
 </pre>
 </div>
-<div caption="Custom Stylesheet" created="20210203195321485" creator="mildmelon" modified="20210203205600875" modifier="mildmelon" tags="$:/tags/Stylesheet Customizations" title="CustomStylesheet" type="text/css">
-<pre></pre>
-</div>
-<div caption="Getting Started" created="20210203205751804" creator="mildmelon" modified="20210203205807295" modifier="mildmelon" tags="TableOfContents" title="GettingStarted" type="text/vnd.tiddlywiki">
+<div caption="Getting Started" created="20210203205751804" creator="mildmelon" modified="20210205062041005" modifier="mildmelon" tags="TableOfContents" title="GettingStarted" type="text/vnd.tiddlywiki">
 <pre>\define lingo-base() $:/language/ControlPanel/Basics/
 Welcome to ~TiddlyWiki and the ~TiddlyWiki community
 
@@ -14575,7 +14615,7 @@ width:16px;
 }
 &lt;/style&gt;</pre>
 </div>
-<div color="#ff8ad8" created="20210205041742035" creator="mildmelon" modified="20210205060618162" modifier="mildmelon" tags="TableOfContents" title="Music">
+<div color="#ff8ad8" created="20210205041742035" creator="mildmelon" modified="20210205062041007" modifier="mildmelon" tags="TableOfContents" title="Music">
 <pre>&lt;&lt;list-links &quot;[tag[Music]sort[title]]&quot; &gt;&gt;</pre>
 </div>
 <div created="20210205040744639" creator="mildmelon" modified="20210205060133281" modifier="mildmelon" tags="[[Code Shanty]] Music" title="Programmers Anthem" type="text/plain" url="[[r/ProgrammerHumor/programmers_anthem/|https://www.reddit.com/r/ProgrammerHumor/comments/lcqy4p/programmers_anthem/]]">
@@ -14623,12 +14663,14 @@ Backup production, we must preserve her
 
 Then deploy your code and go.</pre>
 </div>
-<div caption="Contents" color="#ffd479" created="20210203183046773" creator="mildmelon" list-after="$:/core/ui/SideBar/Open" modified="20210205060608647" modifier="mildmelon" tags="$:/tags/SideBar" title="TableOfContents" type="text/vnd.tiddlywiki">
+<div caption="Contents" color="#ffd479" created="20210203183046773" creator="mildmelon" list-after="$:/core/ui/SideBar/Open" modified="20210205063308329" modifier="mildmelon" tags="$:/tags/SideBar" title="TableOfContents" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+
+</pre>
 </div>
-<div color="#76d6ff" created="20210203184258004" creator="mildmelon" modified="20210205060552257" modifier="mildmelon" tags="TableOfContents" title="Videos">
+<div color="#76d6ff" created="20210203184258004" creator="mildmelon" modified="20210205062041008" modifier="mildmelon" tags="TableOfContents" title="Videos">
 <pre>&lt;&lt;list-links &quot;[tag[Videos]sort[title]]&quot; &gt;&gt;</pre>
 </div>
 
