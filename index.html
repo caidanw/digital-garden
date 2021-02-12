@@ -475,6 +475,8 @@ Error message and password prompt
 
 <li>$:/state/tab-1405194234</li>
 
+<li>$:/state/tab-1494455544</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -520,6 +522,10 @@ Error message and password prompt
 <li>$:/state/toc/TableOfContents/Filter error: Syntax error in filter expression/Filter error: Syntax error in filter expression-Filter error: Syntax error in filter expression--1972136904</li>
 
 <li>$:/state/toc/TableOfContents/Filter error: Syntax error in filter expression/Filter error: Syntax error in filter expression/Filter error: Syntax error in filter expression-Filter error: Syntax error in filter expression--1972136904</li>
+
+<li>$:/state/toc/TableOfContents/Music-Bass Scales--118161433</li>
+
+<li>$:/state/toc/TableOfContents/Music-Scales--118161433</li>
 
 <li>$:/state/toc/TableOfContents/Videos-Rick Astley - Never Gonna Give You Up (Video)-497309061</li>
 
@@ -572,6 +578,12 @@ Error message and password prompt
 <li>$:/state/tree/$:/language/Snippets/</li>
 
 <li>$:/state/tree/$:/languages/</li>
+
+<li>$:/state/tree/$:/library/</li>
+
+<li>$:/state/tree/$:/Manager/</li>
+
+<li>$:/state/tree/$:/Manager/ItemMain/</li>
 
 <li>$:/state/tree/$:/palettes/</li>
 
@@ -661,7 +673,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/metrics/storyleft</li>
 
+<li>$:/themes/tiddlywiki/vanilla/options/codewrapping</li>
+
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>Bass Scales</li>
 
 <li>Code Monkey</li>
 
@@ -670,6 +686,8 @@ Error message and password prompt
 <li>Customizations</li>
 
 <li>Facing It</li>
+
+<li>G Major</li>
 
 <li>GettingStarted</li>
 
@@ -701,109 +719,276 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20191010123116672" modified="20200714164402812" tags="$:/tags/Stylesheet $:/giffmex/stroll $:/giffmex/blinks" title="$:/.giffmex/.Stylesheet4Stroll" type="text/css">
+<div created="20191010123116672" creator="mildmelon" modified="20210212164550247" modifier="mildmelon" tags="$:/tags/Stylesheet $:/giffmex/stroll $:/giffmex/blinks" title="$:/.giffmex/.Stylesheet4Stroll" type="text/css">
 <pre>/*BOXES*/
 
-html body.tc-body .bluebox {display:block;background-color:#eef;padding:5px;padding-left:20px;padding-top:10px;margin-top:5px;margin-bottom:5px;width:95%;color:#000;}
+html body.tc-body .bluebox {
+	display: block;
+	background-color: #eef;
+	padding: 5px;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 95%;
+	color: #000;
+}
 
-html body.tc-body .graybox {display:block;background-color:#eee;padding:5px;padding-left:20px;padding-top:10px;margin-top:5px;margin-bottom:5px;width:95%;color:#000;}
+html body.tc-body .graybox {
+	display: block;
+	background-color: #eee;
+	padding: 5px;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 95%;
+	color: #000;
+}
 
-body p {&lt;&lt;colour foreground&gt;&gt;;}
-code {color: #b0a;background-color:#eee;}
+body p {
+	&lt;&lt;colour foreground&gt;&gt;;
+}
+
+code {
+	color: #b0a;
+	background-color: #eee;
+}
+
 
 /*TIGHT NOTES*/
 
-html body.tc-body h1, html body.tc-body h2, html body.tc-body h3, html body.tc-body h4 { margin-top: 0.3em; margin-bottom: 0.3em; }
+html body.tc-body h1,
+html body.tc-body h2,
+html body.tc-body h3,
+html body.tc-body h4 {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
 
 /*FONT SUBTITLES*/
 
-.serif {font-family: 'Arial', sans-serif; color: &lt;&lt;colour tiddler-editor-border&gt;&gt;font-size:10pt;}
+.serif {
+	font-family: 'Arial', sans-serif;
+	color: &lt;&lt;colour tiddler-editor-border&gt;&gt;font-size:10pt;
+}
 
-html body.tc-body .serif a.tc-tiddlylink-external {font-family: 'Arial', sans-serif;font-size:12pt; line-height:normal;font-weight:normal;color:#666;}
+html body.tc-body .serif a.tc-tiddlylink-external {
+	font-family: 'Arial', sans-serif;
+	font-size: 12pt;
+	line-height: normal;
+	font-weight: normal;
+	color: #666;
+}
+
 
 /*FONT STUFF (colors)*/
 
-html body.tc-body .lightgraybk {background:#eee;padding:1px 4px px 4px;margin-bottom:2px;font-family:'Arial', sans-serif;}
+html body.tc-body .lightgraybk {
+	background: #eee;
+	padding: 1px 4px px 4px;
+	margin-bottom: 2px;
+	font-family: 'Arial', sans-serif;
+}
 
-.red {color:red;}
-html body.tc-body .blue a {color:blue;}
+.red {
+	color: red;
+}
+
+html body.tc-body .blue a {
+	color: blue;
+}
+
 
 /*FONT STUFF SOURCES*/
 
-html body.tc-body .source {color:#777;font-size:10pt;}
+html body.tc-body .source {
+	color: #777;
+	font-size: 10pt;
+}
+
 
 /*ICON COLORS*/
 
-html body.tc-body .tc-image-edit-button {stroke: white;fill:#555;}
-html body.tc-body .tc-image-chevron-up {stroke: white;fill:#ccc;}
-html body.tc-body .tc-image-chevron-down {stroke: white;fill:#ccc;}
-html body.tc-body .tc-image-fold-button {stroke: white;fill:#ccc;}
-html body.tc-body .tc-image-close-button {stroke: white;fill:#555;}
-html body.tc-body .tc-image-unfold-button {stroke: white;fill:#ccc;}
-html body.tc-body .tc-image-preview-open {stroke: white;fill:#f29;font-size:150%;}
-html body.tc-body .tc-image-delete-button {stroke: white;fill:#ff2222;}
-html body.tc-body .tc-image-cancel-button {stroke: white;fill:#ffdd55;}
-html body.tc-body .tc-image-done-button {stroke: white;fill:#094;}
+html body.tc-body .tc-image-edit-button {
+	stroke: white;
+	fill: #555;
+}
+
+html body.tc-body .tc-image-chevron-up {
+	stroke: white;
+	fill: #ccc;
+}
+
+html body.tc-body .tc-image-chevron-down {
+	stroke: white;
+	fill: #ccc;
+}
+
+html body.tc-body .tc-image-fold-button {
+	stroke: white;
+	fill: #ccc;
+}
+
+html body.tc-body .tc-image-close-button {
+	stroke: white;
+	fill: #555;
+}
+
+html body.tc-body .tc-image-unfold-button {
+	stroke: white;
+	fill: #ccc;
+}
+
+html body.tc-body .tc-image-preview-open {
+	stroke: white;
+	fill: #f29;
+	font-size: 150%;
+}
+
+html body.tc-body .tc-image-delete-button {
+	stroke: white;
+	fill: #ff2222;
+}
+
+html body.tc-body .tc-image-cancel-button {
+	stroke: white;
+	fill: #ffdd55;
+}
+
+html body.tc-body .tc-image-done-button {
+	stroke: white;
+	fill: #094;
+}
+
 
 /*INDENTING*/
 
-html body.tc-body .indent1 {margin-left:1.5em;display:block;}
+html body.tc-body .indent1 {
+	margin-left: 1.5em;
+	display: block;
+}
+
 
 /*LINKS*/
 
-html body.tc-body a.tc-tiddlylink {text-decoration: none;font-style: normal;font-weight: normal;} 
-html body.tc-body a.tc-tiddlylink-external {text-decoration: none;font-weight: normal;}
-html body.tc-body a.tc-tiddlylink-visited {text-decoration: none;font-weight: normal;}
+html body.tc-body a.tc-tiddlylink {
+	text-decoration: none;
+	font-style: normal;
+	font-weight: normal;
+}
 
-html body.tc-body .source a.tc-tiddlylink-external {font-weight: normal;font-size:10pt;}
+html body.tc-body a.tc-tiddlylink-external {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+html body.tc-body a.tc-tiddlylink-visited {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+html body.tc-body .source a.tc-tiddlylink-external {
+	font-weight: normal;
+	font-size: 10pt;
+}
+
 
 /*LISTS BASIC*/
 
-html body.tc-body ul li {color: &lt;&lt;colour foreground&gt;&gt;;}
-html body.tc-body ol li {color:&lt;&lt;colour foreground&gt;&gt;;}
+html body.tc-body ul li {
+	color: &lt;&lt;colour foreground&gt;&gt;;
+}
+
+html body.tc-body ol li {
+	color: &lt;&lt;colour foreground&gt;&gt;;
+}
+
 
 /*TIDDLER TITLES*/
 
-.tc-tiddler-missing .tc-title { font-style: normal; font-weight: bold; }
+.tc-tiddler-missing .tc-title {
+	font-style: normal;
+	font-weight: bold;
+}
+
 
 /*VIEWTEMPLATE FONT SIZE*/
 
-html body.tc-body .viewtemplatebigtext {font-size:110%;}
+html body.tc-body .viewtemplatebigtext {
+	font-size: 110%;
+}
+
 
 /*HIDE SECTIONS FOR PRINTING*/
 
-@media print {#tc-page-background {display: none ! important;}} 
-@media print {.tc-tags-wrapper {display: none ! important;}} 
-
- @media print { body.tc-body {background-color: transparent;}}
- @media print {.tc-image-chevron-up {display: none ! important;}} 
- @media print {.tc-image-chevron-down {display: none ! important;}} 
- @media print {button.sidebar-toggle {display: none ! important;}} 
-@media print {.hideprint {display: none ! important;}} 
-@media print {.tc-btn-invisible {display: none ! important;}} 
+@media print {
+	#tc-page-background {
+		display: none ! important;
+	}
+}
 
 @media print {
-
-.story-river {
-margin: 0;
-padding: 0;
+	.tc-tags-wrapper {
+		display: none ! important;
+	}
 }
 
-html body.tc-body .tc-tiddler-frame {
-margin: 0;
-border-bottom: 1px solid #fff;
-padding: 5px;}
-
-html body.tc-body a.tc-tiddlylink-external:hover {
-border: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;
+@media print {
+	body.tc-body {
+		background-color: transparent;
+	}
 }
 
-html body.tc-body .tc-tiddler-info {
-padding: 14px 42px 14px 42px;
-background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
-
+@media print {
+	.tc-image-chevron-up {
+		display: none ! important;
+	}
 }
-</pre>
+
+@media print {
+	.tc-image-chevron-down {
+		display: none ! important;
+	}
+}
+
+@media print {
+	button.sidebar-toggle {
+		display: none ! important;
+	}
+}
+
+@media print {
+	.hideprint {
+		display: none ! important;
+	}
+}
+
+@media print {
+	.tc-btn-invisible {
+		display: none ! important;
+	}
+}
+
+@media print {
+	.story-river {
+		margin: 0;
+		padding: 0;
+	}
+	html body.tc-body .tc-tiddler-frame {
+		margin: 0;
+		border-bottom: 1px solid #fff;
+		padding: 5px;
+	}
+	html body.tc-body a.tc-tiddlylink-external:hover {
+		border: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;
+	}
+	html body.tc-body .tc-tiddler-info {
+		padding: 14px 42px 14px 42px;
+		background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;
+	}
+}</pre>
 </div>
 <div caption="{{$:/core/images/preview-open}}" created="20200129233103456" creator="mildmelon" modified="20210205061844719" modifier="mildmelon" tags="$:/giffmex/stroll $:/giffmex/blinks" title="$:/.giffmex/sidebar/tabs/strollcontrols">
 <pre>\define tagreset() 
@@ -10948,7 +11133,7 @@ Args:
 <div created="20210203161152205" creator="mildmelon" list="TableOfContents $:/.mildmelon/snippets/JavaScriptMacroTemplate $:/.mildmelon/styles/CustomStylesheet [[Markup Reference]]" modified="20210206190757531" modifier="mildmelon" title="$:/favorites/favlist">
 <pre></pre>
 </div>
-<div caption="Meta" created="20210203174907842" creator="mildmelon" list="[[Markup Reference]]" modified="20210205042103423" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/favorites/folder-002">
+<div caption="Meta" created="20210203174907842" creator="mildmelon" list="TableOfContents [[Markup Reference]] $:/.mildmelon/styles/CustomStylesheet $:/.mildmelon/snippets/JavaScriptMacroTemplate" modified="20210212151422188" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/favorites/folder-002">
 <pre></pre>
 </div>
 <div created="20210202152512738" modified="20210202152513954" title="$:/GitHub/Filename">
@@ -12411,7 +12596,7 @@ content=&lt;&lt;contents&gt;&gt;
 /&gt;&lt;/div&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div caption="Recently added" created="20200103090757281" creator="mildmelon" list="TableOfContents $:/.mildmelon/snippets/JavaScriptMacroTemplate $:/.mildmelon/styles/CustomStylesheet [[Favorites Plugin]] $:/plugins/kookma/favorites/viewtoolbar" modified="20210206190757532" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/plugins/kookma/favorites/recent" type="text/vnd.tiddlywiki">
+<div caption="Recently added" created="20200103090757281" creator="mildmelon" list="[[Favorites Plugin]] $:/plugins/kookma/favorites/viewtoolbar" modified="20210212151422187" modifier="mildmelon" tags="$:/tags/Favorites/Folder" title="$:/plugins/kookma/favorites/recent" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
 <div caption="Favorites" created="20191226064836102" creator="mildmelon" list-after="$:/core/ui/SideBar/Open" modified="20210203161150932" modifier="mildmelon" tags="$:/tags/SideBar" title="$:/plugins/kookma/favorites/sidebar-tab" type="text/vnd.tiddlywiki">
@@ -13653,8 +13838,8 @@ Args:
 <div created="20210203171821601" creator="mildmelon" modified="20210205061755874" modifier="mildmelon" title="$:/state/search/currentTab">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20210202154020242" creator="mildmelon" modified="20210209173346151" modifier="mildmelon" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20210202154020242" creator="mildmelon" modified="20210212171534068" modifier="mildmelon" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20210202151702567" creator="mildmelon" modified="20210209062257602" modifier="mildmelon" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -13665,8 +13850,8 @@ Args:
 <div created="20210202154448431" creator="mildmelon" modified="20210203183738511" modifier="mildmelon" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20210202151456818" creator="mildmelon" modified="20210205061455162" modifier="mildmelon" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20210202151456818" creator="mildmelon" modified="20210212164224676" modifier="mildmelon" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
 <div created="20210203171905209" creator="mildmelon" modified="20210203171914988" modifier="mildmelon" title="$:/state/tab--2072517985">
 <pre>$:/plugins/kookma/favorites/manager/folders</pre>
@@ -13674,10 +13859,10 @@ Args:
 <div created="20210202154645544" creator="mildmelon" modified="20210207201016877" modifier="mildmelon" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
-<div created="20210203212212539" creator="mildmelon" modified="20210207200953439" modifier="mildmelon" title="$:/state/tab--697582678">
+<div created="20210203212212539" creator="mildmelon" modified="20210212164218946" modifier="mildmelon" title="$:/state/tab--697582678">
 <pre>$:/core/ui/ControlPanel/Settings/TiddlyWiki</pre>
 </div>
-<div created="20210202152539322" creator="mildmelon" modified="20210202160300062" modifier="mildmelon" title="$:/state/tab--86143343">
+<div created="20210202152539322" creator="mildmelon" modified="20210212164151019" modifier="mildmelon" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20210202154655230" creator="mildmelon" modified="20210205061931322" modifier="mildmelon" title="$:/state/tab--959111941">
@@ -13689,8 +13874,11 @@ Args:
 <div created="20210203200809562" creator="mildmelon" modified="20210203200834782" modifier="mildmelon" title="$:/state/tab-1405194234">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
 </div>
-<div created="20210202151455796" creator="mildmelon" modified="20210207200957210" modifier="mildmelon" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20210212165247831" creator="mildmelon" modified="20210212165256500" modifier="mildmelon" title="$:/state/tab-1494455544">
+<pre>$:/core/ui/TiddlerInfo/Tools</pre>
+</div>
+<div created="20210202151455796" creator="mildmelon" modified="20210212173809163" modifier="mildmelon" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20210202152447145" creator="mildmelon" modified="20210203160341697" modifier="mildmelon" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -13701,8 +13889,8 @@ Args:
 <div created="20210203171821602" creator="mildmelon" modified="20210205061755875" modifier="mildmelon" title="$:/state/tab/search-results/sidebar">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20210202151544747" creator="mildmelon" modified="20210209175243192" modifier="mildmelon" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210202151544747" creator="mildmelon" modified="20210212165306269" modifier="mildmelon" title="$:/state/tab/sidebar--595412856">
+<pre>TableOfContents</pre>
 </div>
 <div created="20210202153956065" creator="mildmelon" modified="20210205061443788" modifier="mildmelon" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -13758,11 +13946,17 @@ Args:
 <div created="20210209174530544" creator="mildmelon" modified="20210209174530544" modifier="mildmelon" title="$:/state/toc/TableOfContents/Filter error: Syntax error in filter expression/Filter error: Syntax error in filter expression/Filter error: Syntax error in filter expression-Filter error: Syntax error in filter expression--1972136904">
 <pre>open</pre>
 </div>
+<div created="20210212165349131" creator="mildmelon" modified="20210212165452175" modifier="mildmelon" title="$:/state/toc/TableOfContents/Music-Bass Scales--118161433">
+<pre>open</pre>
+</div>
+<div created="20210212165309439" creator="mildmelon" modified="20210212165331673" modifier="mildmelon" title="$:/state/toc/TableOfContents/Music-Scales--118161433">
+<pre>open</pre>
+</div>
 <div created="20210203184433673" creator="mildmelon" modified="20210203184433673" modifier="mildmelon" title="$:/state/toc/TableOfContents/Videos-Rick Astley - Never Gonna Give You Up (Video)-497309061">
 <pre>open</pre>
 </div>
-<div created="20210203190925617" creator="mildmelon" modified="20210207201052539" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/">
-<pre>hide</pre>
+<div created="20210203190925617" creator="mildmelon" modified="20210212163912843" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/">
+<pre>show</pre>
 </div>
 <div created="20210203190930539" creator="mildmelon" modified="20210203190930539" modifier="mildmelon" title="$:/state/tree/$:/.giffmex/sidebar/">
 <pre>show</pre>
@@ -13827,14 +14021,23 @@ Args:
 <div created="20210202154148755" creator="mildmelon" modified="20210203191023205" modifier="mildmelon" title="$:/state/tree/$:/GitHub/">
 <pre>hide</pre>
 </div>
-<div created="20210203202131902" creator="mildmelon" modified="20210203202628708" modifier="mildmelon" title="$:/state/tree/$:/language/">
+<div created="20210203202131902" creator="mildmelon" modified="20210212164037853" modifier="mildmelon" title="$:/state/tree/$:/language/">
 <pre>hide</pre>
 </div>
 <div created="20210203202136507" creator="mildmelon" modified="20210203202136507" modifier="mildmelon" title="$:/state/tree/$:/language/Snippets/">
 <pre>show</pre>
 </div>
-<div created="20210203202128484" creator="mildmelon" modified="20210203202130450" modifier="mildmelon" title="$:/state/tree/$:/languages/">
+<div created="20210203202128484" creator="mildmelon" modified="20210212164039494" modifier="mildmelon" title="$:/state/tree/$:/languages/">
 <pre>hide</pre>
+</div>
+<div created="20210212164034134" creator="mildmelon" modified="20210212164035185" modifier="mildmelon" title="$:/state/tree/$:/library/">
+<pre>hide</pre>
+</div>
+<div created="20210212164024591" creator="mildmelon" modified="20210212164033218" modifier="mildmelon" title="$:/state/tree/$:/Manager/">
+<pre>hide</pre>
+</div>
+<div created="20210212164028222" creator="mildmelon" modified="20210212164028222" modifier="mildmelon" title="$:/state/tree/$:/Manager/ItemMain/">
+<pre>show</pre>
 </div>
 <div created="20210203191026155" creator="mildmelon" modified="20210203191028459" modifier="mildmelon" title="$:/state/tree/$:/palettes/">
 <pre>hide</pre>
@@ -13941,7 +14144,7 @@ Args:
 <div created="20210202154608493" creator="m" modified="20210202154609666" modifier="mildmelo" title="$:/status/UserName">
 <pre>mildmelon</pre>
 </div>
-<div created="20210209175220842" creator="mildmelon" list="TableOfContents" modified="20210209175220842" modifier="mildmelon" title="$:/StoryList">
+<div created="20210212151404487" creator="mildmelon" list="[[G Major]]" modified="20210212173803870" modifier="mildmelon" title="$:/StoryList">
 <pre></pre>
 </div>
 <div color="#bbb" created="20210205060424400" creator="mildmelon" icon="$:/core/images/tag-button" modified="20210205060424400" modifier="mildmelon" title="$:/TagManager">
@@ -14158,8 +14361,15 @@ Args:
 <div created="20210202151512479" modified="20210202151513406" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
 <pre>0px</pre>
 </div>
-<div created="20210202151459431" creator="mildmelon" modified="20210206233448828" modifier="mildmelon" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<div created="20210212164254284" creator="mildmelon" modified="20210212164306566" modifier="mildmelon" title="$:/themes/tiddlywiki/vanilla/options/codewrapping">
+<pre>pre</pre>
+</div>
+<div created="20210202151459431" creator="mildmelon" modified="20210212162456673" modifier="mildmelon" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
+</div>
+<div created="20210212151120959" creator="mildmelon" modified="20210212165344543" modifier="mildmelon" tags="Music" title="Bass Scales" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;list-links &quot;[tag[Bass Scales]sort[title]]&quot;&gt;&gt;
+</pre>
 </div>
 <div created="20210203193759222" creator="mildmelon" modified="20210209175104915" modifier="mildmelon" tags="Videos Music" title="Code Monkey" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;embed &quot;https://youtu.be/qYodWEKCuGg&quot;&gt;&gt;</pre>
@@ -14173,6 +14383,18 @@ Args:
 </div>
 <div created="20210207170117747" creator="mildmelon" modified="20210209173205195" modifier="mildmelon" tags="Videos" title="Facing It" type="text/vnd.tiddlywiki">
 <pre>&lt;div style=&quot;padding:56.25% 0 0 0;position:relative;&quot;&gt;&lt;iframe src=&quot;https://player.vimeo.com/video/380157225&quot; style=&quot;position:absolute;top:0;left:0;width:100%;height:100%;&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script src=&quot;https://player.vimeo.com/api/player.js&quot;&gt;&lt;/script&gt;</pre>
+</div>
+<div created="20210212151048936" creator="mildmelon" modified="20210212173752396" modifier="mildmelon" reveal-wiki="Hide" tags="[[Bass Scales]]" title="G Major" type="text/vnd.tiddlywiki">
+<pre>| !Notes | G | A | B | C | D | E | F# |
+
+&lt;$button&gt;
+&lt;$action-listops $field=&quot;reveal-wiki&quot; $subfilter=&quot;+[toggle[Show],[Hide]]&quot; /&gt;
+{{!!reveal-wiki}} Wiki
+&lt;/$button&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;!!reveal-wiki&quot; text=&quot;Hide&quot; default=&quot;Show&quot;&gt;
+&lt;&lt;embed &quot;https://en.wikipedia.org/wiki/G_major&quot;&gt;&gt;
+&lt;/$reveal&gt;</pre>
 </div>
 <div caption="Getting Started" created="20210203205751804" creator="mildmelon" modified="20210209174916562" modifier="mildmelon" tags="" title="GettingStarted" type="text/vnd.tiddlywiki">
 <pre>\define lingo-base() $:/language/ControlPanel/Basics/
